@@ -34,6 +34,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	int i = 0;
 	int isWindowMode = FALSE;
+	bool isScreenBlack = false;
 	TCHAR moviePath[256];
 	wsprintf(moviePath, TEXT("Movies/%d.mp4"), i);
 	int movie = LoadGraph(moviePath);
@@ -72,8 +73,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				PlayMovieToGraph(movie);
 			}
 		}
+		if (Key[KEY_INPUT_B] == 1)
+		{
+			isScreenBlack = (isScreenBlack) ? false : true;
+		}
 	
 		DrawGraph(0, 0, movie, FALSE);
+
+		if (isScreenBlack)
+			DrawBox(0, 0, 1920, 1080, GetColor(0, 0, 0), TRUE);
 
 		if (Key[KEY_INPUT_D] != 0)
 		{

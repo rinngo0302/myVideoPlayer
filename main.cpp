@@ -85,7 +85,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 		if (Key[KEY_INPUT_D] != 0)
 		{
-			DrawFormatString(0, 0, GetColor(255, 255, 255), "Not Found\ni: %d", i);
+			if (movie == -1)
+				DrawFormatString(0, 20, GetColor(255, 255, 255), "Not Found");
+
+			DrawFormatString(0, 0, GetColor(255, 255, 255), "i: %d", i);
 		}
 	}
 

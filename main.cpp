@@ -72,13 +72,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				PlayMovieToGraph(movie);
 			}
 		}
+	
+		DrawGraph(0, 0, movie, FALSE);
 
-		if (i != 0 && movie == -1)
+		if (Key[KEY_INPUT_D] != 0)
 		{
 			DrawFormatString(0, 0, GetColor(255, 255, 255), "Not Found\ni: %d", i);
 		}
-	
-		DrawGraph(0, 0, movie, FALSE);
 	}
 
 	DxLib_End();

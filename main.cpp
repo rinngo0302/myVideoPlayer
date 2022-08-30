@@ -21,9 +21,9 @@ int updateKey()
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	ChangeWindowMode(TRUE);
+	//ChangeWindowMode(TRUE);
 	SetAlwaysRunFlag(TRUE);
-	SetOutApplicationLogValidFlag(FALSE);
+	//SetOutApplicationLogValidFlag(FALSE);
 	SetWindowSizeChangeEnableFlag(TRUE);
 	SetFullScreenResolutionMode(DX_FSRESOLUTIONMODE_DESKTOP);
 	SetWindowText("54HR HRアワーショー");

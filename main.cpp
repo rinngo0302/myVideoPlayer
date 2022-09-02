@@ -53,12 +53,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		}
 		if (Key[KEY_INPUT_RIGHT] == 1)
 		{
+			PauseMovieToGraph(movie);
 			i++;
 			wsprintf(moviePath, TEXT("Movies/%d.mp4"), i);
 			movie = LoadGraph(moviePath);
 		}
 		if (Key[KEY_INPUT_LEFT] == 1)
 		{
+			PauseMovieToGraph(movie);
 			i--;
 			wsprintf(moviePath, TEXT("Movies/%d.mp4"), i);
 			movie = LoadGraph(moviePath);
